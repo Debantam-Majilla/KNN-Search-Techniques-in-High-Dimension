@@ -5,6 +5,12 @@ Mainly Consists:
   2) K-d Tree Search 
   3) Ball-Tree Search
 
+
+
+
+
+
+
 Brute Force Search :
 
  It is an explicit search teachnique & takes very long to execute. Basic Nearest Neighbour Search is "Lazy Learner" & execute all distances while testing.
@@ -14,7 +20,21 @@ Brute Force Search :
 
 
 
+
+
+
+
+
+
+
 KD-Tree algorithm and the Ball algorithm are both binary algorithms to build such a tree. Binary means in this context, that each parent node only has two child nodes. Typically the algorithms are applied in Nearest Neighbour Search.
+
+
+
+
+
+
+
 
 
 K-d Tree :
@@ -22,13 +42,28 @@ K-d Tree :
 The KD Tree Algorithm is one of the most commonly used Nearest Neighbor Algorithms. The data points are split at each node into two sets. Like the previous algorithm, the KD Tree is also a binary tree algorithm always ending in a maximum of two nodes. The split criteria chosen are often the median. On the right side of the image below, you can see the exact position of the data points, on the left side the spatial position of them.
 
 
+
+
+
+
 Ball-Tree:
+
 The Ball Tree Algorithm can be contemplated as a metric tree. Metric trees organize and structure data points considering the metric space in which the points are located. Using metrics the points do not need to be finite-dimensional or in vectors (Kumar, Zhang & Nayar, 2008).
 The algorithm divides the data points into two clusters. Each cluster is encompassed by a circle(2D) or a sphere(3D). The sphere is often called a hypersphere.
 
 From the sphere form of the cluster, the name Ball tree algorithm is derived. Each cluster represents a node of the tree. Let’s see how the algorithm is executed.
 The children are chosen to have maximum distance between them, typically using the following construction at each level of the tree.
 First, the centroid of the whole cloud of data points is set. The point with the maximum distance to the centroid is selected as the center of the first cluster and child node. The point furthest away from the center of the first cluster is chosen as the center point of the second cluster. All other data points are then assigned to the node and cluster to the closest center, either being cluster 1 or cluster 2. Any point can only be a member of one cluster. The sphere lines can intersect each other, but the points must be clearly assigned to one cluster. If a point is exactly in the middle of both centers and has followingly the same distance to both sides, it has to be assigned to one cluster. The clusters can be unbalanced. That is basically the concept behind the Ball Tree Algorithm. The process of dividing the data points into two clusters/spheres is repeated within each cluster until a defined depth is reached. This leads to a nested cluster containing more and more circles.
+
+
+
+
+
+
+
+
+
+
 
 
 COMPARISON & SUMMERY :
