@@ -1,5 +1,7 @@
 # KNN-Search-Techniques-in-High-Dimension
 
+* Easy Understanding - Go through My PPT 
+
 
 Mainly Consists:
   1) Brute Force Search
