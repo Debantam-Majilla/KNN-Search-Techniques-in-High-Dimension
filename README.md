@@ -1,9 +1,16 @@
 # KNN-Search-Techniques-in-High-Dimension
 
+
 Mainly Consists:
   1) Brute Force Search
   2) K-d Tree Search 
   3) Ball-Tree Search
+
+
+(which WORKS BETTER)
+
+LOW DIMENSION DATA: Ball-Tree Search > K-d Tree Search > Brute Force Search 
+HIGH DIMESION DATA: Brute Force Search > Ball-Tree Search > K-d Tree Search 
 
 
 
@@ -75,3 +82,20 @@ For a high-dimensional space, the Ball Tree Algorithm might be the best solution
 
 
 
+BUT IN HIGH DIMENSION(ABOVE 60) :
+
+ALL THESE CONCEPTS IS BASICALLY NOT VALID. IN HIGH DIMENSION, BRUTE FORCE SEARCH WORKS FAR BETTER THAN OTHER.
+
+HERE COMES WHY & HOW ?
+
+Modern days , computers have multicore processors, which are capable to computing multiple tasks in parallel.
+LETS OUR DATASET DIMENSION IS 100. D=100
+THINK : BRUTE FORCE ABLE TO CALCULATE say, 100 distances in parallel ( single iteration) where as earlier it was calculating 100 different diatances for single iteration.
+        Now it takes way less time.
+        
+THEN WHY NOT BALL-TREE & K-D TREE ?
+
+these are binary search techniques, they first seperate the dimension into regions & then calculate distances in those smaller regions.
+with multicore also, they cant directly compute distances.
+
+This makes K-d tree, ball tree slow in high dimension.
