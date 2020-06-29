@@ -10,6 +10,10 @@ Mainly Consists:
 (which WORKS BETTER)
 
 LOW DIMENSION DATA: Ball-Tree Search > K-d Tree Search > Brute Force Search 
+
+
+
+
 HIGH DIMESION DATA: Brute Force Search > Ball-Tree Search > K-d Tree Search 
 
 
